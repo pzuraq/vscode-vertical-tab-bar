@@ -4,7 +4,7 @@ This extension adds styles to turn the tab bar into a vertical tab bar. This is
 only done when the standard sidebar is hidden, so it doesn't consume to much
 space. This makes it much easier to deal with large lists of files:
 
-[Preview](images/preview-large.png)
+![Preview](images/preview-large.png)
 
 ## Installation
 
