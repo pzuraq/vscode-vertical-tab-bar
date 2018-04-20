@@ -1,0 +1,14 @@
+{
+    "name": "vertical-tab-bar",
+    "displayName": "vertical-tab-bar",
+    "repository": "https://github.com/pzuraq/vscode-vertical-tab-bar",
+    "description": "Styles for a Vertical Tab Bar",
+    "version": "1.0.0",
+    "publisher": "pzuraq",
+    "engines": {
+        "vscode": "^1.22.0"
+    },
+    "categories": [
+        "Themes"
+    ]
+}

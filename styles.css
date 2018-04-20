@@ -1,0 +1,41 @@
+
+/* Flex Tab Bar */
+
+.monaco-workbench.nosidebar > .activitybar {
+  display: none;
+}
+
+.monaco-workbench.nosidebar > .editor {
+left: 0 !important;
+}
+
+.monaco-workbench.nosidebar > .editor > .content > .one-editor-silo > .container {
+display: flex;
+flex-direction: row;
+}
+
+.monaco-workbench.nosidebar>.part.editor>.content>.one-editor-silo>.container>.title {
+overflow: visible;
+height: 100%;
+flex-direction: column;
+}
+
+.monaco-workbench.nosidebar >.part.editor>.content>.one-editor-silo>.container>.title .tabs-container {
+flex-direction: column;
+height: 100%;
+}
+
+.monaco-workbench.nosidebar > .part.editor > .content > .one-editor-silo
+> .container > .title .tabs-container > .tab {
+  width: 100%;
+}
+
+
+.monaco-workbench.nosidebar .monaco-editor, .monaco-editor .inputarea {
+margin-top: 17px;
+}
+
+
+.monaco-workbench.nosidebar .scroll-decoration {
+display: none !important;
+}
