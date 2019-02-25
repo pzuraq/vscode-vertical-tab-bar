@@ -1,41 +1,46 @@
-
-/* Flex Tab Bar */
-
-.monaco-workbench.nosidebar > .activitybar {
+/* Disable CVS and Split editor buttons */
+.editor-actions {
   display: none;
 }
 
-.monaco-workbench.nosidebar > .editor {
-left: 0 !important;
+.monaco-workbench > .part.editor > .content .editor-group-container {
+  display: flex;
+  flex-direction: row;
 }
 
-.monaco-workbench.nosidebar > .editor > .content > .one-editor-silo > .container {
-display: flex;
-flex-direction: row;
+.monaco-workbench .monaco-editor,
+.monaco-editor .inputarea {
+  margin-top: 17px;
 }
 
-.monaco-workbench.nosidebar>.part.editor>.content>.one-editor-silo>.container>.title {
-overflow: visible;
-height: 100%;
-flex-direction: column;
+.monaco-workbench .scroll-decoration {
+  display: none !important;
 }
 
-.monaco-workbench.nosidebar >.part.editor>.content>.one-editor-silo>.container>.title .tabs-container {
-flex-direction: column;
-height: 100%;
+.monaco-workbench > .part.editor > .content .editor-group-container > .title {
+  overflow: visible;
+  height: 100%;
+  flex-direction: column;
 }
 
-.monaco-workbench.nosidebar > .part.editor > .content > .one-editor-silo
-> .container > .title .tabs-container > .tab {
+.monaco-workbench
+  > .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container {
+  flex-direction: column;
+  height: 100%;
+  width: 160px;
+}
+
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container
+  > .tab.sizing-fit {
   width: 100%;
-}
-
-
-.monaco-workbench.nosidebar .monaco-editor, .monaco-editor .inputarea {
-margin-top: 17px;
-}
-
-
-.monaco-workbench.nosidebar .scroll-decoration {
-display: none !important;
+  min-width: auto;
 }
