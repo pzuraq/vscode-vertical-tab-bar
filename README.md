@@ -1,3 +1,6 @@
+# UNSUPPORTED
+This extension is not maintained and does not work on the latest versions of VS Code.
+
 # Vertical Tab Bar
 
 This extension adds styles to turn the tab bar into a vertical tab bar. This is
