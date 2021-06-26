@@ -1,41 +1,74 @@
-
 /* Flex Tab Bar */
 
-.monaco-workbench.nosidebar > .activitybar {
+/* Disable CVS and Split editor buttons */
+.editor-actions {
   display: none;
 }
 
-.monaco-workbench.nosidebar > .editor {
-left: 0 !important;
+.monaco-workbench > .part.editor > .content .editor-group-container {
+  display: flex;
+  flex-direction: row;
 }
 
-.monaco-workbench.nosidebar > .editor > .content > .one-editor-silo > .container {
-display: flex;
-flex-direction: row;
+/* to adjust the width of the tab-container adjust all references to 250px */
+.monaco-workbench > .part.editor > .content .editor-group-container > .title {
+  overflow: visible;
+  height: 100%;
+  width: 250px;
+  flex-direction: column;
 }
 
-.monaco-workbench.nosidebar>.part.editor>.content>.one-editor-silo>.container>.title {
-overflow: visible;
-height: 100%;
-flex-direction: column;
+.monaco-workbench .part.editor > .content .editor-group-container > .title.tabs > .tabs-and-actions-container {
+  height: 100%;
 }
 
-.monaco-workbench.nosidebar >.part.editor>.content>.one-editor-silo>.container>.title .tabs-container {
-flex-direction: column;
-height: 100%;
+.monaco-workbench .part.editor > .content .editor-group-container > .title.tabs > .tabs-and-actions-container > .monaco-scrollable-element {
+  height: 100% !important;
 }
 
-.monaco-workbench.nosidebar > .part.editor > .content > .one-editor-silo
-> .container > .title .tabs-container > .tab {
+.monaco-workbench > .part.editor > .content .editor-group-container > .title .tabs-container {
+  flex-direction: column;
+  height: 100%;
+  width: auto;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.sizing-fit {
   width: 100%;
+  min-width: auto;
 }
 
-
-.monaco-workbench.nosidebar .monaco-editor, .monaco-editor .inputarea {
-margin-top: 17px;
+/* truncate long file names and leave room for the close button */
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.sizing-fit .monaco-icon-label {
+  overflow: hidden;
+  width: calc(250px - 30px);
 }
 
+/* reduce the width of the editor container by the width of the tab container */
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-container  {
+  width: calc(100% - 250px);
+  height: 100% !important;
+}
 
-.monaco-workbench.nosidebar .scroll-decoration {
-display: none !important;
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-container > .editor-instance
+> .monaco-editor {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-container > .editor-instance
+> .monaco-editor > .overflow-guard {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-container > .editor-instance
+> .monaco-editor > .overflow-guard > .editor-scrollable {
+  width: calc(100% - 68px) !important;
+    height: 100% !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-container > .editor-instance
+> .monaco-editor > .overflow-guard > .minimap {
+  transform: translateX(-250px);
+    height: 100% !important;
 }
